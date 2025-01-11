@@ -41,14 +41,18 @@ class Products(BaseModel):
         if self.product_images.first():
             return  self.product_images.first().image
 
-        return "https://static.vecteezy.com/system/resources/thumbnails/022/014/063/small/missing-picture-page-for-website-design-or-mobile-app-design-no-image-available-icon-vector.jpg"
+        # return "https://static.vecteezy.com/system/resources/thumbnails/022/014/063/small/missing-picture-page-for-website-design-or-mobile-app-design-no-image-available-icon-vector.jpg"
+        
+        return ""
     
     
     def getPdfFirstImage(self):
         if self.product_images.first():
             return f"http://127.0.0.1:8000/media/{self.product_images.first().image}" 
 
-        return "https://static.vecteezy.com/system/resources/thumbnails/022/014/063/small/missing-picture-page-for-website-design-or-mobile-app-design-no-image-available-icon-vector.jpg"
+        # return "https://static.vecteezy.com/system/resources/thumbnails/022/014/063/small/missing-picture-page-for-website-design-or-mobile-app-design-no-image-available-icon-vector.jpg"
+        
+        return ""
     
 
 class VariantOptions(BaseModel):
